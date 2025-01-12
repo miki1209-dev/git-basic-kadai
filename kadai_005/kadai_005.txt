@@ -1,0 +1,38 @@
+mac_miki@oyamayuzunoMacBook-Pro ~ % cd /Users/mac_miki/samurai-subject 
+mac_miki@oyamayuzunoMacBook-Pro samurai-subject % mkdir git_challenge
+mac_miki@oyamayuzunoMacBook-Pro samurai-subject % cd ./git_challenge 
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git init
+Initialized empty Git repository in /Users/mac_miki/samurai-subject/git_challenge/.git/
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % touch hello_world.txt
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git add .            
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+new file mode 100644
+index 0000000..5dd01c1
+--- /dev/null
++++ b/hello_world.txt
+@@ -0,0 +1 @@
++Hello, world!
+\ No newline at end of file
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git commit -m "hello_world.txtを追加"
+[main (root-commit) a94e84c] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git add hello_world.txt 
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git diff --staged
+diff --git a/hello_world.txt b/hello_world.txt
+index 5dd01c1..42ae6b0 100644
+--- a/hello_world.txt
++++ b/hello_world.txt
+@@ -1 +1,2 @@
+-Hello, world!
+\ No newline at end of file
++Hello, world!
++こんにちは、世界！
+\ No newline at end of file
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git commit -m "日本語訳を追記"
+[main 4f5cd01] 日本語訳を追記
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+mac_miki@oyamayuzunoMacBook-Pro git_challenge % git log --oneline
+4f5cd01 (HEAD -> main) 日本語訳を追記
+a94e84c hello_world.txtを追加
